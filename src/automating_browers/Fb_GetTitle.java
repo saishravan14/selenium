@@ -20,6 +20,10 @@ public static void main(String[] args) throws InterruptedException {
 	WebElement password = driver.findElement(By.id("pass"));
 	password.sendKeys("narutohinata143*");
 	WebElement login = driver.findElement(By.name("login"));
+	System.out.println(login.isDisplayed());
+	System.out.println(login.isEnabled());
+	System.out.println(login.getTagName());
+	System.out.println(login.isSelected());
 	login.click();
 	driver.getCurrentUrl();
 	String title2 = driver.getTitle();
@@ -30,6 +34,7 @@ public static void main(String[] args) throws InterruptedException {
 	else {
 		System.out.println("login unsuccessful");
 	}
+	driver.quit();
 	
 }
 }
