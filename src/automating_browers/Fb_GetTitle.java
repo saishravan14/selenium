@@ -23,7 +23,7 @@ public static void main(String[] args) throws InterruptedException {
 	System.out.println(login.isDisplayed());
 	System.out.println(login.isEnabled());
 	System.out.println(login.getTagName());
-	System.out.println(login.isSelected());
+	
 	login.click();
 	driver.getCurrentUrl();
 	String title2 = driver.getTitle();

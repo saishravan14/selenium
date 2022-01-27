@@ -11,13 +11,12 @@ public static void main(String[] args) throws InterruptedException {
 	System.setProperty("webdriver.chrome.driver","./software/chromedriver.exe");
 	WebDriver driver = new ChromeDriver();
 	driver.get("https://github.com/login");
+	System.out.println(driver.getTitle());
 	driver.manage().window().fullscreen();
 	WebElement username = driver.findElement(By.id("login_field"));
-	username.sendKeys("saishravan14",Keys.TAB,"pnrao8968*",Keys.TAB,Keys.ENTER);
-	//WebElement password = driver.findElement(By.id("password"));
-	//password.sendKeys("pnrao8968*",Keys.ENTER);
-	Thread.sleep(2000);
-	driver.quit();
+	username.sendKeys("saishravan14");
+	WebElement password = driver.findElement(By.id("password"));
+	password.sendKeys("pnrao8968*",Keys.ENTER);
 	
 }
 }
